@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-declare var jquery:any;
-declare var $ :any;
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -11,12 +10,5 @@ export class AppComponent {
   title = 'app';
   
   // Select all links with hashes
-  smoothScrolling(el){
-    var id = $(el).data('target');
-    var $target = $('#' + id);
-    console.log($target.length)
-    $('html,body').animate({
-        scrollTop: $target.offset().top
-    }, 1000);
-  };
 }
+
